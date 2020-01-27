@@ -270,6 +270,8 @@ mod tests {
             Color::parse("0xFEDCBA"),
             Some(Color::Rgb(0xfe, 0xdc, 0xba))
         );
+
+        assert_eq!(Color::parse("!notvalid!"), None);
     }
 
     #[test]
